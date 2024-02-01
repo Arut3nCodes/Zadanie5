@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <item
+            android:id="@+id/fragmentLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/lefticon_foreground"
+            android:title="Swipe Fragment" />
+        <item
+            android:id="@+id/fragmentCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:title="Main Fragment" />
+        <item
+            android:id="@+id/list4Fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:title="List fragment" />
+    </group>
+</menu>

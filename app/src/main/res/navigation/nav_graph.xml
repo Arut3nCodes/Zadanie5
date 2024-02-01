@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentCenter">
+
+    <fragment
+        android:id="@+id/fragmentCenter"
+        android:name="com.example.zadanie5.MainFragment"
+        android:label="fragment_center"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/fragmentLeft"
+        android:name="com.example.zadanie5.LeftFragment"
+        android:label="fragment_left"
+        tools:layout="@layout/fragment_left" />
+    <fragment
+        android:id="@+id/fragmentRight"
+        android:name="com.example.zadanie5.RightFragment"
+        android:label="fragment_right"
+        tools:layout="@layout/fragment_right" >
+        <action
+            android:id="@+id/action_fragmentRight_to_displayFragment"
+            app:destination="@id/displayFragment"
+            app:popUpTo="@id/list4Fragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_fragmentRight_to_addFragment"
+            app:destination="@id/addFragment"
+            app:popUpTo="@id/list4Fragment"
+            app:launchSingleTop="true" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_fragmentCenter"
+        app:destination="@id/fragmentCenter"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/fragmentCenter"/>
+    <action
+        android:id="@+id/action_global_fragmentLeft"
+        app:destination="@id/fragmentLeft"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/fragmentCenter"/>
+    <action
+        android:id="@+id/action_global_fragmentRight"
+        app:destination="@id/list4Fragment"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/fragmentCenter"/>
+    <fragment
+        android:id="@+id/displayFragment"
+        android:name="com.example.zadanie5.DisplayFragment"
+        android:label="fragment_display"
+        tools:layout="@layout/fragment_display">
+            <action
+                android:id="@+id/action_displayFragment_to_addFragment"
+                app:launchSingleTop="true"
+                app:destination="@id/addFragment"
+                app:popUpTo="@id/displayFragment"
+                app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.zadanie5.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/list4Fragment"
+        android:name="com.example.zadanie5.List4Fragment"
+        android:label="List4Fragment">
+        <action
+            android:id="@+id/action_list4Fragment_to_displayFragment"
+            app:destination="@id/displayFragment"
+            app:popUpTo="@id/list4Fragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_list4Fragment_to_addFragment"
+            app:destination="@id/addFragment"
+            app:popUpTo="@id/list4Fragment"
+            app:launchSingleTop="true" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_list4Fragment"
+        app:destination="@id/list4Fragment"
+        app:popUpTo="@id/fragmentCenter"
+        app:popUpToInclusive="true"
+        app:launchSingleTop="true" />
+</navigation>

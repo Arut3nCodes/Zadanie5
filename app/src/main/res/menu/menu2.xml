@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menuItem1"
+        android:icon="@android:drawable/ic_popup_sync"
+        android:title="@string/menuItem1"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menuItem5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@android:drawable/ic_dialog_dialer"
+        android:title="title"
+        android:visible="true"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menuItem2"
+        android:title="@string/menuItem2"
+        />
+    <item
+        android:id="@+id/menuItem3"
+        android:title="@string/menuItem3"
+        />
+    <item
+        android:id="@+id/menuItem4"
+        android:title="@string/menuItem4"
+        />
+</menu>
